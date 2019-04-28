@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactTable from "react-table";
 import "./styles/BoardList.css";
 import "react-table/react-table.css";
