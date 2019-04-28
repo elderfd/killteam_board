@@ -4,7 +4,10 @@ import "./styles/BoardList.css";
 import "react-table/react-table.css";
 
 interface DataFormat {
-    name: string
+    name: string,
+    gamesPlayed: number,
+    gamesWon: number,
+    gamesLost: number
 };
 
 interface Props {
@@ -12,13 +15,11 @@ interface Props {
 };
 
 const BoardList: React.FC<Props> = (props: Props) => {
-    let [activePage, setActivePage] = useState(0);
-    
     const columns = [
-        {
-            Header: "Name",
-            accessor: "name"
-        }
+        { Header: "Name", accessor: "name" },
+        { Header: "Played", accessor: "gamesPlayed" },
+        { Header: "Won", accessor: "gamesWon" },
+        { Header: "Lost", accessor: "gamesLost" }
     ];
      
     const pageSizeOptions = [5, 10, 20, 25, 50, 100];
