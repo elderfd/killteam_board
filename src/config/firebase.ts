@@ -18,5 +18,5 @@ const firebaseAuth = (provider: firebase.auth.AuthProvider) => firebase.auth().s
 const database = firebase.database().ref();
 
 export const authRef = firebase.auth();
-export const loginGoolge = () => firebaseAuth(googleProvider);
+export const loginGoogle = () => firebaseAuth(googleProvider);
 export const scoresRef = database.child("scores");
